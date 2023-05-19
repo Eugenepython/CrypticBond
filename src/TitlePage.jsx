@@ -1,5 +1,5 @@
 
-import bondBackground from '../bondbackground.png';
+import bondbackground from '/bondbackground.png';
 import './index.css';
 
   

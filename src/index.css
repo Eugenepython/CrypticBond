@@ -22,7 +22,6 @@ body {
   border: 2px solid #333;
   border-radius: 4px;
   background-color: #54b8dd;
-  
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
@@ -102,7 +101,7 @@ body {
 
 .titleBackGround {
 margin-top: 0px;
-  background-image: url('./bondBackground.png');
+  background-image: url('/bondbackground.png');
  min-height: 100vh
 }
 

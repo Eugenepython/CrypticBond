@@ -1,8 +1,6 @@
 import data from './data';
 import { useState, useEffect } from 'react';
 
-
-
 function shuffleAndSixArray(array) {
   const shuffledArray = array.sort(() => Math.random() - 0.5);
   return shuffledArray.slice(0, 6);
