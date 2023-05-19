@@ -129,7 +129,7 @@ margin-top: 0px;
   margin: 5px;
   font-family: 'Second Font';
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   border: 2px solid rgb(11, 11, 11);
   height: auto;
   width: 80%;
@@ -137,10 +137,10 @@ margin-top: 0px;
   background-image: radial-gradient(rgba(255, 255, 255, 0.2) 10%, transparent 10.5%),
                     radial-gradient(rgba(0, 0, 0, 0.2) 10%, transparent 10.5%);
   opacity: 0.8;
-  line-height: 3em;
+  line-height: 1em;
   font-weight: bold;
   color: black;
-  padding: 30px;
+  padding: 25px;
   box-shadow:
   inset #f5f5f5 0 0 0 5px,
   inset #e0e0e0 0 0 0 1px,
@@ -156,12 +156,6 @@ margin-top: 0px;
   justify-content: center; 
   align-items: center; 
 }
-
-
-
-
-
-
 
 
 .quoteAndChoices{
