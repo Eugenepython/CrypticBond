@@ -31,7 +31,7 @@ export default function SortData(props) {
         correct: false,
       }));
       setWrongAnswers(newWrongBond.map((x) => x));
-      setTimeoutCompleted(true); // Indicate that the timeout has completed
+      setTimeoutCompleted(true); 
     }, 500);
     return () => {
       clearTimeout(timeout);

@@ -44,7 +44,7 @@ useEffect(() => {
  
   const loadImage = async () => {
     const num = Math.floor(Math.random() * 68) + 1;
-    const imagePath = `./images/${num}.jpg`;
+    const imagePath = `/images/${num}.jpg`;
     const imageModule = await import(imagePath);
     setImageNum(imageModule.default);
   };
@@ -61,9 +61,7 @@ useEffect(() => {
     <>
       <div>
         <TitlePage comMence = {beGin} showTitle = {showTitle} />
-
         <div className='mystery' style={{ backgroundImage: `url(${image})`, display: showTitle ? 'none' : 'block' }}>
-
         {round <= numberOfQuestions ? <div className = 'rounds'> <h2>Round {round}</h2> </div>:null}
     <div>{round <= (numberOfQuestions ) ?<SortData clickItInSortData = {clickItInApp} selectedButton = {selectedButton} /> :null}</div>
     {round <= numberOfQuestions ? <div className = 'currentScore'> <h3>Score : {count}</h3> </div>:null}
