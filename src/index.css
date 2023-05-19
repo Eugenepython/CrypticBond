@@ -114,22 +114,16 @@ margin-top: 0px;
 
 
 
-.spanBackground {
-  font-size: 15px;
- font:bolder;
-  color: #333; /* Dark text color */
-  background-color: rgba(255, 255, 255, 0.7); /* Semi-opaque white background */
-  padding: 0.2em 0.4em; /* Optional padding for better visual appearance */
-}
+
 
 @font-face {
   font-family: 'James Bond Font';
-  src: url('./Limelight-1XzM.ttf') format('truetype');
+  src: url('/Limelight-1XzM.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Second Font';
-  src: url('./GarlicCheeseBread-3zK23.ttf') format('truetype');
+  src: url('/GarlicCheeseBread-3zK23.ttf') format('truetype');
 }
 
 .quoteText {
@@ -193,10 +187,23 @@ margin-top: 0px;
 
 .description{
   color: black;
-  
+  font-family:Arial, Helvetica, sans-serif;
   margin: 5px;
-  text-align: center
+  text-align: center;
+  padding : 30px;
 }
+
+.spanBackground {
+  font-size: 15px;
+ font:bolder;
+  color: #333; /* Dark text color */
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-opaque white background */
+  //padding: 0.2em 0.4em; /* Optional padding for better visual appearance */
+}
+
+
+
+
 
 .start {
   text-align: center;
