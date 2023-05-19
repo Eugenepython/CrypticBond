@@ -1,6 +1,8 @@
 import SortData from './SortData'
 import TitlePage from './TitlePage'
 
+
+
 import { useState, useEffect } from 'react'
 
 
@@ -10,6 +12,7 @@ function App() {
   const [showTitle, setShowTitle] = useState(true)
   const [selectedButton, setSelectedButton] = useState(null);
   const [image, setImageNum ] = useState(7)
+  const [randomNumber, setRandomNumber] = useState(0);
  
  
   //console.log(selectedButton)
@@ -37,20 +40,20 @@ function reStart(){
 function beGin(){
   setShowTitle(false)
 } 
-    
 
 
 useEffect(() => {
- 
-  const loadImage = async () => {
-    const num = Math.floor(Math.random() * 68) + 1;
-    const imagePath = `/images/${num}.jpg`;
-    const imageModule = await import(imagePath);
-    setImageNum(imageModule.default);
-  };
-
-  loadImage();
+  const min = 1;
+  const max = 68;
+  const newRandomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+  setRandomNumber(newRandomNumber);
 }, [round]);
+
+
+
+console.log(randomNumber);
+ 
+
 
 //console.log("the score is "  + count)
 //console.log("the round is " + round)
@@ -61,7 +64,7 @@ useEffect(() => {
     <>
       <div>
         <TitlePage comMence = {beGin} showTitle = {showTitle} />
-        <div className='mystery' style={{ backgroundImage: `url("/images/7.jpg")`, display: showTitle ? 'none' : 'block' }}>
+        <div className='mystery' style={{ backgroundImage: `url("/images/${randomNumber}.jpg")`, display: showTitle ? 'none' : 'block' }}>
         {round <= numberOfQuestions ? <div className = 'rounds'> <h2>Round {round}</h2> </div>:null}
     <div>{round <= (numberOfQuestions ) ?<SortData clickItInSortData = {clickItInApp} selectedButton = {selectedButton} /> :null}</div>
     {round <= numberOfQuestions ? <div className = 'currentScore'> <h3>Score : {count}</h3> </div>:null}
