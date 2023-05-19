@@ -153,8 +153,8 @@ export default{
    clues: [
      "A confession of a spy",
      "Shoelaces can save your life",
-     "Delcatessens made out of stainless steel",
-     "The wrong man got the Kings medal",
+     "delicatessen made out of stainless steel",
+     "The wrong man got the King's medal",
      "Liverpool, not Manchester",
      "You can smuggle anything except heroin"
    ]

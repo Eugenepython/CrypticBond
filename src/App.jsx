@@ -10,7 +10,7 @@ function App() {
   const [showTitle, setShowTitle] = useState(true)
   const [selectedButton, setSelectedButton] = useState(null);
   const [image, setImageNum ] = useState(7)
-  const [gameOver, setGameOver] = useState(false)
+ 
  
   //console.log(selectedButton)
   const numberOfQuestions = 10
@@ -47,7 +47,6 @@ useEffect(() => {
     const imagePath = `./images/${num}.jpg`;
     const imageModule = await import(imagePath);
     setImageNum(imageModule.default);
-    round >= numberOfQuestions ? setGameOver(true) : ''
   };
 
   loadImage();
@@ -57,7 +56,7 @@ useEffect(() => {
 //console.log("the round is " + round)
 
 
-console.log(gameOver)
+
   return (
     <>
       <div>
@@ -65,9 +64,9 @@ console.log(gameOver)
 
         <div className='mystery' style={{ backgroundImage: `url(${image})`, display: showTitle ? 'none' : 'block' }}>
 
-        {!gameOver  ?<div className = 'rounds'> <h2>Round {round}</h2> </div>:null}
+        {round <= numberOfQuestions ? <div className = 'rounds'> <h2>Round {round}</h2> </div>:null}
     <div>{round <= (numberOfQuestions ) ?<SortData clickItInSortData = {clickItInApp} selectedButton = {selectedButton} /> :null}</div>
-    {!gameOver ?<div className = 'currentScore'> <h3>Score : {count}</h3> </div>:null}
+    {round <= numberOfQuestions ? <div className = 'currentScore'> <h3>Score : {count}</h3> </div>:null}
     <div className = 'finalPage'>
     <div className = 'finalScore'>{round > (numberOfQuestions ) ?<h3>You scored  {count}/{numberOfQuestions} !</h3>  :null}</div> 
     <div className = 'lastButton'>{round > (numberOfQuestions ) ?<button className = 'reStart' onClick = {reStart}> Go Back</button>  :null}</div> 
