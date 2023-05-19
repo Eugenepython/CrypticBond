@@ -129,10 +129,9 @@ margin-top: 0px;
   margin: 5px;
   font-family: 'Second Font';
   text-align: center;
-  font-size: 50px;
+  font-size: 25px;
   border: 2px solid rgb(11, 11, 11);
   height: auto;
-  min-height: 8rem;
   width: 80%;
   background-color: #FFA500;
   background-image: radial-gradient(rgba(255, 255, 255, 0.2) 10%, transparent 10.5%),
@@ -233,7 +232,7 @@ margin-top: 0px;
     }
 
 .rounds {
-  font-size: 25px;
+  font-size: 16px;
   color: white;
   font-weight: bolder;
   margin-left : 2em;
@@ -244,7 +243,6 @@ margin-top: 0px;
   padding-left: 10px;
   padding-top: 5px;
   text-align: center;
-  
 }
 
 .finalScore {
