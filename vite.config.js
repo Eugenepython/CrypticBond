@@ -4,7 +4,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base : "/CrypticBond",
+  base : "/",
   resolve: {
     alias: {
       '/@images/': path.resolve(__dirname, './src/images'),
